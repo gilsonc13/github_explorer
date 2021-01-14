@@ -1,4 +1,4 @@
-# GitHun Explorer
+# GitHub Explorer
 
 Busca de usuário e seus repositorios no GitHub
 
