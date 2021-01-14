@@ -4,7 +4,7 @@ Busca de usuário e seus repositorios no GitHub
 
 ## 🛠️ Construído com
 
-Mencione as ferramentas que você usou para criar seu projeto
+Ferramentas utilizadas para criar o projeto
 
 * [ReactJS](https://pt-br.reactjs.org/) 
 * [TypeScript](https://www.typescriptlang.org/) 
