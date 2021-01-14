@@ -18,9 +18,13 @@ export const Form = styled.form<FormProps>`
   max-width: 700px;
 
   display: flex;
+  flex-direction: column;
+
+  @media (min-width: 500px) {
+    flex-direction: row;
+  }
 
   input {
-    flex: 1;
     height: 70px;
     padding: 0 24px;
     border: 0;
@@ -37,13 +41,17 @@ export const Form = styled.form<FormProps>`
     &::placeholder {
       color: #a8a8b3;
     }
+
+    @media (min-width: 500px) {
+      flex: 1;
+    }
   }
 
   button {
-    width: 210px;
+    width: 100%;
     height: 70px;
     background: #05d361;
-    border-radius: 0px 5px 5px 0px;
+    border-radius: 0px 0px 5px 5px;
     border: 0;
     color: #fff;
     font-weight: bold;
@@ -51,6 +59,11 @@ export const Form = styled.form<FormProps>`
 
     &:hover {
       background: ${shade(0.2, '#05d361')};
+    }
+
+    @media (min-width: 500px) {
+      width: 210px;
+      border-radius: 0px 5px 5px 0px;
     }
   }
 `;
@@ -109,11 +122,16 @@ export const CardUser = styled.div`
 
       &.btn-lista {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         margin: 20px 0 0 0;
 
+        @media (min-width: 700px) {
+          justify-content: space-between;
+          flex-direction: row;
+        }
+
         button {
-          width: 220px;
+          width: auto;
           height: 32px;
           background: #FAFBFC;
           border-radius: 6px;
@@ -122,10 +140,17 @@ export const CardUser = styled.div`
           font-weight: bold;
           transition: background-color 0.2s;
           font-size: 14px;
+          margin-bottom: 15px;
+
+          @media (min-width: 700px) {
+            margin-bottom: 0px;
+            width: 220px;
+          }
 
           &:hover {
             background: ${shade(0.05, '#FAFBFC')};
           }
+
         }
       }
 
@@ -150,3 +175,5 @@ export const ErrorRepositorio = styled.span`
   color: #c53030;
   margin-top: 28px;
 `;
+
+
